@@ -47,6 +47,13 @@ nav #gnbList {
   height: 60px;
   color: white;
   background-color: #454545;
+
+  transition: 0.4s ease-in-out;
+}
+
+#gnbList li a:hover {
+  background-color: #fff;
+  color: #454545;
 }
 
 /* slider section */
@@ -88,7 +95,7 @@ main .slider {
 
 main section:last-child {
   background-color: #cccccc;
-  padding: 10px 50px;
+  padding: 50px 0;
 }
 
 .imgContainer {
