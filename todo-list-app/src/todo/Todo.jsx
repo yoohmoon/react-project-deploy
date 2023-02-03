@@ -14,8 +14,8 @@ function reducer(state, action) {
         todo.id === action.id ? { ...todo, done: !todo.done } : todo
       );
 
-    /*  case "TOGGLE_TODO":
-      return state.filter((todo) => todo.id !== action.id); */
+    case "REMOVE_TODO":
+      return state.filter((todo) => todo.id !== action.id);
 
     default:
       return state;

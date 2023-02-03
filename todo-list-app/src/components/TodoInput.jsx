@@ -1,3 +1,4 @@
+import { darken, lighten } from "polished";
 import { useRef, useState } from "react";
 import styled from "styled-components";
 
@@ -101,6 +102,14 @@ const Button = styled.button`
   background-color: #868e96;
 
   cursor: pointer;
+
+  &:hover {
+    background: ${lighten(0.05, "#868e96")};
+  }
+
+  &:active {
+    background: ${darken(0.05, "#868e96")};
+  }
 `;
 
 export default TodoInput;
