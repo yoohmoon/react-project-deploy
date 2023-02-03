@@ -13,6 +13,7 @@ function reducer(state, action) {
       return state.map((todo) =>
         todo.id === action.id ? { ...todo, done: !todo.done } : todo
       );
+    //   [{},{},...] 배열 내 특정 요소만 수정하는 것이라서 { 중괄호 }만 써주는건가?
 
     case "REMOVE_TODO":
       return state.filter((todo) => todo.id !== action.id);
@@ -36,6 +37,9 @@ function Todo() {
       <TodoInput todos={todos} dispatch={dispatch} />
     </Container>
   );
+  //   todos={todos}를 props로 설정하는 경우와, dispatch={dispatch}로 설정하는 경우는 어떤 차이가 있지?
+  // todos={todos} 는 상태값?!을 전달하는 경우임. 그 안에 initial state인 배열을 전달받게 되는 거인듯.
+  //   고칠 점: TodoInput에는 todos={todos} 안 보내도 됨.
 }
 
 const Container = styled.div`
